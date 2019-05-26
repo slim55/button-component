@@ -1,0 +1,32 @@
+:root {
+    --btn-bg: #41b5e5;
+    --btn-bg-hover: #b42025;
+    --btn-color: #fff;
+    --btn-color-hover: #fff;
+    --btn-font-family: Arial, Helvetica, sans-serif;
+    --btn-font-size: 16px;
+    --btn-font-style: normal;
+    --btn-height: 60px;
+    --btn-height-sm: 40px;
+    --btn-height-lg: 80px;
+    --btn-padding: 0 20px;
+    --btn-text-transform: none;
+
+    --btn-outline-bg: #fff;
+    --btn-outline-bg-hover: #fff;
+    --btn-outline-border-color: #41b5e5;
+    --btn-outline-border-color-hover: #b42025;
+    --btn-outline-border-width: 3px;
+    --btn-outline-color: #000;
+    --btn-outline-color-hover: #000;
+
+    --btn-radius: 5px;
+
+    --btn-skew-transform: -10deg;
+    --btn-skew-transform-text: 10deg;
+
+    --btn-hover-ripple-out-indent: -12px;
+    --btn-hover-ripple-out-duration: 1s;
+
+    --btn-hover-slide-up-duration: 500ms;
+}

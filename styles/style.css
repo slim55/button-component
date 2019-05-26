@@ -1,0 +1,256 @@
+.btn, button.btn, a.btn {
+    background: transparent;
+    border: none;
+    box-sizing: border-box;
+    color: var(--btn-color);
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--btn-font-family);
+    font-size: var(--btn-font-size);
+    font-style: var(--btn-font-style);
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    outline: none;
+    padding: var(--btn-padding);
+    position: relative;
+    text-decoration: none;
+    text-transform: var(--btn-text-transform);
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    z-index: 0;
+}
+
+.btn::before, button.btn::before, a.btn::before {
+    background: var(--btn-bg);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    -webkit-transition: 300ms;
+    transition: 300ms;
+    width: 100%;
+    z-index: -1;
+}
+
+.btn:hover, button.btn:hover, a.btn:hover {
+    color: var(--btn-color-hover);
+}
+
+.btn:hover::before, button.btn:hover::before, a.btn:hover::before {
+    background: var(--btn-bg-hover);
+}
+
+.btn-sm, button.btn-sm, a.btn-sm {
+    height: var(--btn-height-sm);
+    line-height: var(--btn-height-sm);
+    padding: 0 15px;
+}
+
+.btn-lg, button.btn-lg, a.btn-lg {
+    height: var(--btn-height-lg);
+    line-height: var(--btn-height-lg);
+    padding: 0 30px;
+}
+
+.btn-block, button.btn-block, a.btn-block {
+    display: block;
+}
+
+.btn-outline {
+    color: var(--btn-outline-color);
+}
+
+.btn-outline::before {
+    background: var(--btn-outline-bg);
+    border: var(--btn-outline-border-width) solid var(--btn-outline-border-color);
+}
+
+.btn-outline:hover {
+    color: var(--btn-outline-color-hover);
+}
+
+.btn-outline:hover::before {
+    background: var(--btn-outline-bg-hover);
+    border-color: var(--btn-outline-border-color-hover);
+}
+
+.btn-radius {
+    border-radius: var(--btn-radius);
+}
+
+.btn-radius::before {
+    border-radius: var(--btn-radius);
+}
+
+.btn-circle {
+    border-radius: var(--btn-height);
+}
+
+.btn-circle::before {
+    border-radius: var(--btn-height);
+}
+
+.btn-circle.btn-sm {
+    border-radius: var(--btn-height-sm);
+}
+
+.btn-circle.btn-lg {
+    border-radius: var(--btn-height-lg);
+}
+
+.btn-skew {
+    -webkit-transform: skew(var(--btn-skew-transform));
+    transform: skew(var(--btn-skew-transform));
+}
+
+.btn-skew > span {
+    display: block;
+    -webkit-transform: skew(var(--btn-skew-transform-text));
+    transform: skew(var(--btn-skew-transform-text));
+}
+
+@-webkit-keyframes hvr-ripple-out {
+    100% {
+        top: var(--btn-hover-ripple-out-indent);
+        right: var(--btn-hover-ripple-out-indent);
+        bottom: var(--btn-hover-ripple-out-indent);
+        left: var(--btn-hover-ripple-out-indent);
+        opacity: 0;
+    }
+}
+
+@keyframes hvr-ripple-out {
+    100% {
+        top: var(--btn-hover-ripple-out-indent);
+        right: var(--btn-hover-ripple-out-indent);
+        bottom: var(--btn-hover-ripple-out-indent);
+        left: var(--btn-hover-ripple-out-indent);
+        opacity: 0;
+    }
+}
+
+.btn-hover-ripple-out::after {
+    -webkit-animation-duration: var(--btn-hover-ripple-out-duration);
+    animation-duration: var(--btn-hover-ripple-out-duration);
+    border: var(--btn-outline-border-width) solid var(--btn-bg-hover);
+    bottom: 0;
+    content: '';
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.btn-hover-ripple-out.btn-outline::after {
+    border-color: var(--btn-outline-border-color-hover);
+}
+
+.btn-hover-ripple-out.btn-radius::after {
+    border-radius: var(--btn-radius);
+}
+
+.btn-hover-ripple-out.btn-circle::after {
+    border-radius: var(--btn-height);
+}
+
+.btn-hover-ripple-out.btn-circle.btn-sm::after {
+    border-radius: var(--btn-height-sm);
+}
+
+.btn-hover-ripple-out.btn-circle.btn-lg::after {
+    border-radius: var(--btn-height-lg);
+}
+
+.btn-hover-ripple-out:hover::after {
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: hvr-ripple-out;
+    animation-name: hvr-ripple-out;
+    opacity: 1;
+}
+
+.btn-hover-slide-up {
+    overflow: hidden;
+}
+
+.btn-hover-slide-up span:last-child {
+    color: var(--btn-color-hover);
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: var(--btn-hover-slide-up-duration);
+    transition: var(--btn-hover-slide-up-duration);
+    width: 100%;
+    z-index: 0;
+}
+
+.btn-hover-slide-up span:last-child::before {
+    background: var(--btn-bg-hover);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.btn-hover-slide-up:hover {
+    color: var(--btn-color);
+}
+
+.btn-hover-slide-up:hover span:last-child {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.btn-hover-slide-up:hover::before {
+    background: var(--btn-bg);
+}
+
+.btn-hover-slide-up.btn-outline span:last-child {
+    color: var(--btn-outline-color-hover);
+}
+
+.btn-hover-slide-up.btn-outline span:last-child::before {
+    background: var(--btn-outline-bg-hover);
+    border: var(--btn-outline-border-width) solid var(--btn-outline-border-color-hover);
+}
+
+.btn-hover-slide-up.btn-outline:hover {
+    color: var(--btn-outline-color);
+}
+
+.btn-hover-slide-up.btn-outline:hover::before {
+    background: var(--btn-outline-bg);
+    border-color: var(--btn-outline-border-color);
+}
+
+.btn-hover-slide-up.btn-radius span:last-child::before {
+    border-radius: var(--btn-radius);
+}
+
+.btn-hover-slide-up.btn-circle span:last-child::before {
+    border-radius: var(--btn-height);
+}
+
+.btn-hover-slide-up.btn-circle.btn-sm span:last-child::before {
+    border-radius: var(--btn-height-sm);
+}
+
+.btn-hover-slide-up.btn-circle.btn-lg span:last-child::before {
+    border-radius: var(--btn-height-lg);
+}
