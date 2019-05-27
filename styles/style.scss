@@ -2,6 +2,8 @@ $btn-has-outline: true !default;
 $btn-has-radius: true !default;
 $btn-has-circle: true !default;
 $btn-has-skew: true !default;
+$btn-has-second: true !default;
+$btn-has-third: true !default;
 $btn-hover-ripple-out: true !default;
 $btn-hover-slide-up: true !default;
 
@@ -49,6 +51,42 @@ a.btn {
     }
   }
 
+  @if $btn-has-second == true {
+    &-second {
+      color: var(--btn-second-color);
+
+      &::before {
+        background: var(--btn-second-bg);
+      }
+
+      &:hover {
+        color: var(--btn-second-color-hover);
+
+        &::before {
+          background: var(--btn-second-bg-hover);
+        }
+      }
+    }
+  }
+
+  @if $btn-has-third == true {
+    &-third {
+      color: var(--btn-third-color);
+
+      &::before {
+        background: var(--btn-third-bg);
+      }
+
+      &:hover {
+        color: var(--btn-third-color-hover);
+
+        &::before {
+          background: var(--btn-third-bg-hover);
+        }
+      }
+    }
+  }
+
   &-sm {
     height: var(--btn-height-sm);
     line-height: var(--btn-height-sm);
@@ -71,7 +109,7 @@ a.btn {
     color: var(--btn-outline-color);
 
     &::before {
-      background: var(--btn-outline-bg);
+      background: var(--btn-outline-bg-second);
       border: var(--btn-outline-border-width) solid var(--btn-outline-border-color);
     }
 
@@ -81,6 +119,46 @@ a.btn {
       &::before {
         background: var(--btn-outline-bg-hover);
         border-color: var(--btn-outline-border-color-hover);
+      }
+    }
+
+    @if $btn-has-second == true {
+      &.btn-second {
+        color: var(--btn-second-outline-color);
+
+        &::before {
+          background: var(--btn-second-outline-bg);
+          border: var(--btn-second-outline-border-width) solid var(--btn-second-outline-border-color);
+        }
+
+        &:hover {
+          color: var(--btn-second-outline-color-hover);
+
+          &::before {
+            background: var(--btn-second-outline-bg-hover);
+            border-color: var(--btn-second-outline-border-color-hover);
+          }
+        }
+      }
+    }
+
+    @if $btn-has-third == true {
+      &.btn-third {
+        color: var(--btn-third-outline-color);
+
+        &::before {
+          background: var(--btn-third-outline-bg);
+          border: var(--btn-third-outline-border-width) solid var(--btn-third-outline-border-color);
+        }
+
+        &:hover {
+          color: var(--btn-third-outline-color-hover);
+
+          &::before {
+            background: var(--btn-third-outline-bg-hover);
+            border-color: var(--btn-third-outline-border-color-hover);
+          }
+        }
       }
     }
   }
@@ -152,9 +230,31 @@ a.btn {
       top: 0;
     }
 
+    @if $btn-has-second == true {
+      &.btn-second::after {
+        border: var(--btn-second-outline-border-width) solid var(--btn-second-bg-hover);
+      }
+    }
+
+    @if $btn-has-third == true {
+      &.btn-third::after {
+        border: var(--btn-third-outline-border-width) solid var(--btn-third-bg-hover);
+      }
+    }
+
     @if $btn-has-outline == true {
-      &.btn-outline::after {
-        border-color: var(--btn-outline-border-color-hover);
+      &.btn-outline {
+        &::after {
+          border-color: var(--btn-outline-border-color-hover);
+        }
+        
+        &.btn-second::after {
+          border-color: var(--btn-second-outline-border-color-hover);
+        }
+
+        &.btn-third::after {
+          border-color: var(--btn-third-outline-border-color-hover);
+        }
       }
     }
 
@@ -230,6 +330,38 @@ a.btn {
       }
     }
 
+    @if $btn-has-second == true {
+      &.btn-second {
+        span:last-child {
+          color: var(--btn-second-color-hover);
+
+          &::before {
+            background: var(--btn-second-bg-hover);
+          }
+        }
+
+        &:hover::before {
+          background: var(--btn-second-bg);
+        }
+      }
+    }
+
+    @if $btn-has-third == true {
+      &.btn-third {
+        span:last-child {
+          color: var(--btn-third-color-hover);
+
+          &::before {
+            background: var(--btn-third-bg-hover);
+          }
+        }
+
+        &:hover::before {
+          background: var(--btn-third-bg);
+        }
+      }
+    }
+
     @if $btn-has-outline == true {
       &.btn-outline {
         span:last-child {
@@ -247,6 +379,46 @@ a.btn {
           &::before {
             background: var(--btn-outline-bg);
             border-color: var(--btn-outline-border-color);
+          }
+        }
+        
+        &.btn-second {
+          span:last-child {
+            color: var(--btn-second-outline-color-hover);
+
+            &::before {
+              background: var(--btn-second-outline-bg-hover);
+              border: var(--btn-second-outline-border-width) solid var(--btn-second-outline-border-color-hover);
+            }
+          }
+
+          &:hover {
+            color: var(--btn-second-outline-color);
+
+            &::before {
+              background: var(--btn-second-outline-bg);
+              border-color: var(--btn-second-outline-border-color);
+            }
+          }
+        }
+
+        &.btn-third {
+          span:last-child {
+            color: var(--btn-third-outline-color-hover);
+
+            &::before {
+              background: var(--btn-third-outline-bg-hover);
+              border: var(--btn-third-outline-border-width) solid var(--btn-third-outline-border-color-hover);
+            }
+          }
+
+          &:hover {
+            color: var(--btn-third-outline-color);
+
+            &::before {
+              background: var(--btn-third-outline-bg);
+              border-color: var(--btn-third-outline-border-color);
+            }
           }
         }
       }

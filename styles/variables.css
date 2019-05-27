@@ -20,6 +20,32 @@
     --btn-outline-color: #000;
     --btn-outline-color-hover: #000;
 
+    --btn-second-bg: #41b5e5;
+    --btn-second-bg-hover: #000;
+    --btn-second-color: #fff;
+    --btn-second-color-hover: #fff;
+
+    --btn-second-outline-bg: #fff;
+    --btn-second-outline-bg-hover: #fff;
+    --btn-second-outline-border-color: #41b5e5;
+    --btn-second-outline-border-color-hover: #000;
+    --btn-second-outline-border-width: 3px;
+    --btn-second-outline-color: #000;
+    --btn-second-outline-color-hover: #000;
+
+    --btn-third-bg: #41b5e5;
+    --btn-third-bg-hover: #b42025;
+    --btn-third-color: #fff;
+    --btn-third-color-hover: #fff;
+
+    --btn-third-outline-bg: #fff;
+    --btn-third-outline-bg-hover: #fff;
+    --btn-third-outline-border-color: #41b5e5;
+    --btn-third-outline-border-color-hover: #b42025;
+    --btn-third-outline-border-width: 3px;
+    --btn-third-outline-color: #000;
+    --btn-third-outline-color-hover: #000;
+
     --btn-radius: 5px;
 
     --btn-skew-transform: -10deg;
